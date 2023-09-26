@@ -1,0 +1,28 @@
+.footer{
+    background-color: #343a40 !important;
+}
+.icon-20{
+    font-size: 20px;
+}
+.cursor{
+	cursor:pointer;
+}
+.bigIcon{
+	font-size:20px;
+}
+.btn-row{
+    margin-top: 29px;
+}
+.boxItemPanel{
+	box-shadow: rgba(136, 136, 136, 0.72) 1px 1px 4px 1px;
+	padding: 23px 23px 13px;
+	overflow: auto;
+    background: #fff;
+    border-radius: 9px;
+}
+.font-18{
+	font-size: 18px;
+}
+.font-16{
+	font-size: 16px;
+}

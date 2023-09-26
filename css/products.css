@@ -1,0 +1,44 @@
+.promotion{
+    text-decoration: line-through;
+}
+.borders{
+	border: 1px solid #e6b0b0;
+}
+.padding-carousel{
+	padding: 5px 6px 8px;
+	width: 62px;
+    height: auto;
+}
+.border-bottom{
+	border-bottom: 1px solid #e6b0b0 !important;
+}
+.imgCarousel{
+	align-self: center !important;
+	text-align: center;
+}
+.imgCarouselItem{
+	width: 31%;
+	height: auto;
+}
+.miniItem{
+	max-width: 100%;
+	height: 65px;
+	margin-left: auto;
+  	margin-right: auto;
+}
+.itemGallery{
+	width: 100px;
+	height: auto;
+}
+.carousel-control{
+	color: #0000b7;
+	font-size: 25px;
+	opacity: 1;
+}
+.indicator-control{
+	background-color: black !important;
+}
+#galleryCaptions img {
+	vertical-align: middle;
+	align-self: center !important;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FrontEnd</title>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Styles -->
+        <link href="../../css/index.css" rel="stylesheet">
+        <link href="../../css/menu.css" rel="stylesheet">
+        <link href="../../css/products.css" rel="stylesheet">
+
+        <!-- Icons -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" crossorigin="anonymous">
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="../../js/menu.js"></script>
+
+    </head>
+    <body>
+
+        <!--
+            Header
+        -->
+
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="#!">
+                <i class="fas fa-truck-loading"></i> Mercado Rápido y Fácil
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <!-- Navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../cart.html" class="text-reset"> 
+                        <i class="fas fa-shopping-cart icon-20 white"></i> <span class="badge rounded-pill text-bg-success">0</span> 
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user fa-fw"></i>
+                        Sediel Ruiz
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#!">Mi perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../../index-logout.html">
+                            Cerrar sesion
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!--
+            Container
+        -->
+        <div id="layoutSidenav">
+            <!--
+                Menu
+            -->
+            
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Estadisticas</div>
+                            <a class="nav-link" href="#!">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            
+                            <div class="sb-sidenav-menu-heading">Administración</div>
+                            
+
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseProducts" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="sb-nav-link-icon"><i class="fas fa-project-diagram"></i></div>
+                                Productos
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseProducts" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="create.html">Crear producto</a>
+                                    <a class="nav-link" href="consult.html">Consulta</a>
+                                    <a class="nav-link" href="catalogue.html">Catalogo</a>
+                                </nav>
+                            </div>
+        
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                Ordenes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseOrders" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="../orders/history.html">Mis ordenes</a>
+                                </nav>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logueado como:</div>
+                        Sediel Ruiz
+                        <br>
+                        Administrador
+                    </div>
+                </nav>
+            </div>
+
+
+            <div id="layoutSidenav_content">
+                <main class="py-4 container">
+                    <!--
+                        Contenido
+                    -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                    <a href="consult.html" class="btn btn-success"><i class="fas fa-arrow-left back"></i></a>
+                                </div>
+                                <div class="col-xs-10 col-sm-10 col-md-10">
+                                    <h2>Imagenes de aceite</h2>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="card-body">
+                            
+                            
+                            <div class="row">
+                                <div class="d-none d-md-block col-md-1 text-center borders cursor">
+                                    <div class="text-center border-bottom padding-carousel">
+                                        <img data-bs-target="#galleryCaptions" data-bs-slide-to="0" src="../../images/aceite.webp" class="img-fluid d-block " alt="Aceite">
+                                    </div>
+                                    <div class="text-center border-bottom padding-carousel">
+                                        <img data-bs-target="#galleryCaptions" data-bs-slide-to="1" src="../../images/aceite2.webp" class="img-fluid d-block " alt="Aceite">
+                                    </div>
+                                    <div class="text-center border-bottom padding-carousel">
+                                        <img data-bs-target="#galleryCaptions" data-bs-slide-to="2" src="../../images/aceite2.webp" class="img-fluid d-block " alt="Aceite">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-7 borders">
+                                    <div id="galleryCaptions" class="carousel slide carouselGallery">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner text-center imgs">
+                                            <div class="carousel-item active">
+                                                <img class="imgCarousel" src="../../images/aceite.webp" alt="Aceite">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="imgCarousel" src="../../images/aceite2.webp" alt="Aceite">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="imgCarousel" src="../../images/aceite.webp" alt="Aceite">
+                                            </div>
+                                        </div>
+
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4 borders info-product">
+                                    <h3>Aceite</h3>
+                                    <h3>
+                                        <span class="promotion">$ 5.000</span>
+                                        <br>
+                                        Promoción <br>
+                                        14 días /
+                                        $ 3.000
+                                    </h3>
+                                    <span class="font-20">Disponible</span><br><br>
+                                    <span class="font-20">
+                                        <i class="far fa-credit-card"></i>
+                                        Diferentes medio de pago
+                                    </span><br>
+                                    <span class="font-20">
+                                        <i class="fas fa-truck"></i>
+                                        Pago contraentrega
+                                    </span><br>
+                                </div>
+                            </div>
+
+
+                            <h2>Nuevo archivo</h2><hr>
+                            <form action="#!" method="post" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-8 col-md-8">
+                                        <div class="form-group">
+                                            <label class="file">Archivo</label>
+                                            <input class="form-control" type="file" multiple id="images" name="images"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 btn-row">
+                                        <input class="btn btn-success" type="submit" name="sendImage"value="Subir">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-2">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-8 col-md-8">
+                                                <img src="../../images/aceite.webp" class="d-block miniItem" alt="Aceite">
+                                            </div>
+                                            <form action="#!" method="post">
+                                                <i class="fas fa-trash-alt bigIcon cursor"></i>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-8 col-md-8">
+                                                <img src="../../images/aceite2.webp" class="d-block miniItem" alt="Aceite 2">
+                                            </div>
+                                            <form action="#!" method="post">
+                                                <i class="fas fa-trash-alt bigIcon cursor"></i>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+                <!--
+                    Footer
+                -->
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">&copy; 2022</div>
+                            <div>
+                                <a href="#">Politícas de privacidad</a>
+                                &middot;
+                                <a href="#">Terminos y condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>

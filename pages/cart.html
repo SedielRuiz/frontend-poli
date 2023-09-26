@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FrontEnd</title>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Styles -->
+        <link href="../css/index.css" rel="stylesheet">
+        <link href="../css/menu.css" rel="stylesheet">
+
+        <!-- Icons -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" crossorigin="anonymous">
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="../js/menu.js"></script>
+
+    </head>
+    <body>
+
+        <!--
+            Header
+        -->
+
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="#!">
+                <i class="fas fa-truck-loading"></i> Mercado Rápido y Fácil
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <!-- Navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/cart.html" class="text-reset"> 
+                        <i class="fas fa-shopping-cart icon-20 white"></i> <span class="badge rounded-pill text-bg-success">0</span> 
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user fa-fw"></i>
+                        Sediel Ruiz
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#!">Mi perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../index-logout.html">
+                            Cerrar sesion
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!--
+            Container
+        -->
+        <div id="layoutSidenav">
+            <!--
+                Menu
+            -->
+            
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Estadisticas</div>
+                            <a class="nav-link" href="#!">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            
+                            <div class="sb-sidenav-menu-heading">Administración</div>
+                            
+
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseProducts" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="sb-nav-link-icon"><i class="fas fa-project-diagram"></i></div>
+                                Productos
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseProducts" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="products/">Crear producto</a>
+                                    <a class="nav-link" href="products/consult.html">Consulta</a>
+                                    <a class="nav-link" href="products/catalogue.html">Catalogo</a>
+                                </nav>
+                            </div>
+        
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                Ordenes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseOrders" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                     
+                                     <a class="nav-link" href="orders/history.html">Mis ordenes</a>
+                                </nav>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logueado como:</div>
+                        Sediel Ruiz
+                        <br>
+                        Administrador
+                    </div>
+                </nav>
+            </div>
+
+
+            <div id="layoutSidenav_content">
+                <main class="py-4 container">
+                    <!--
+                        Contenido
+                    -->
+                    <h2><i class="fas fa-shopping-cart"></i> Carrito de compras</h2><hr>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 font-24 d-none d-md-block">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-5">
+                                    Nombre
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center">
+                                    Precio
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center">
+                                    Cantidad
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center">
+                                    Total
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-1 text-center">
+                                    Eliminar
+                                </div>
+                            </div><hr>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-5">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-2">
+                                            <img src="../images/aceite.webp" class="card-img-top d-block img-responsive imgCart" alt="Aceite">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-10 align-self-center">
+                                            <span>
+                                                <a class="dark" href="products/detail.html" target="_blank">Aceite</a>
+                                                <span class="badge badge-pill badge-light" data-toggle="collapse" href="#12345678" role="button" aria-expanded="false" aria-controls="12345678">
+                                                    <i class="fas fa-ellipsis-h cursor"></i>
+                                                </span>
+                                                <div class="collapse" id="12345678">
+                                                    <span class="text-muted miga font-12">Descripción:</span> <span class="font-13">No tiene</span><br>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center align-self-center font-18">
+                                    <span><span class="d-md-none">Precio:</span> $ 3.000</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center align-self-center">
+                                    2
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center align-self-center font-18">
+                                    <span><span class="d-md-none">Total:</span> $ 6.000</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-1 text-center align-self-center">
+                                    <form action="#!" method="POST">
+                                        <i class="fas fa-trash-alt cursor font-18" onclick="change('2', '{{$id}}')"></i>
+                                    </form>
+                                </div>
+                            </div><hr>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-5">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-2">
+                                            <img src="../images/aceite.webp" class="card-img-top d-block img-responsive imgCart" alt="Aceite">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-10 align-self-center">
+                                            <span>
+                                                <a class="dark" href="products/detail.html" target="_blank">Aceite</a>
+                                                <span class="badge badge-pill badge-light" data-toggle="collapse" href="#12345678" role="button" aria-expanded="false" aria-controls="12345678">
+                                                    <i class="fas fa-ellipsis-h cursor"></i>
+                                                </span>
+                                                <div class="collapse" id="12345678">
+                                                    <span class="text-muted miga font-12">Descripción:</span> <span class="font-13">No tiene</span><br>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center align-self-center font-18">
+                                    <span><span class="d-md-none">Precio:</span> $ 3.000</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center align-self-center">
+                                    4
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 text-center align-self-center font-18">
+                                    <span><span class="d-md-none">Total:</span> $ 12.000</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-1 text-center align-self-center">
+                                    <form action="#!" method="POST">
+                                        <i class="fas fa-trash-alt cursor font-18" onclick="change('2', '{{$id}}')"></i>
+                                    </form>
+                                </div>
+                            </div><hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-9"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 text-right">
+                            <h3>Total: $ 18.000</h3>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-2 text-right align-self-center">
+                            <a href="products/catalogue.html" class="btn btn-primary">Seguir comprando</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-2 text-right">
+                            <a href="orders/confirm.html" class="font-18 btn btn-success {{count($products) == 0 ? 'noVisible' : ''}}" style="width: 180px;height: 49px;">
+                                <i class="fas fa-clipboard-check"></i> Confirmar orden
+                            </a>
+                        </div><br>
+                    </div>
+                    <script>
+                        function change(opc, id){
+                            if(opc == 1){
+                                $("#btnChange"+id).click();
+                            }else{
+                                var s = confirm("¿Seguro desea retirar este producto?");
+                                if(s){
+                                    $("#btnTrash"+id).click();
+                                }
+                            }
+                        }
+                    </script>
+                </main>
+                
+                <!--
+                    Footer
+                -->
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">&copy; 2022</div>
+                            <div>
+                                <a href="#">Politícas de privacidad</a>
+                                &middot;
+                                <a href="#">Terminos y condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>

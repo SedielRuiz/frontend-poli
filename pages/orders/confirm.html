@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FrontEnd</title>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Styles -->
+        <link href="../../css/index.css" rel="stylesheet">
+        <link href="../../css/menu.css" rel="stylesheet">
+        <link href="../../css/products.css" rel="stylesheet">
+
+        <!-- Icons -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" crossorigin="anonymous">
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="../../js/menu.js"></script>
+
+    </head>
+    <body>
+
+        <!--
+            Header
+        -->
+
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="#!">
+                <i class="fas fa-truck-loading"></i> Mercado Rápido y Fácil
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <!-- Navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../cart.html" class="text-reset"> 
+                        <i class="fas fa-shopping-cart icon-20 white"></i> <span class="badge rounded-pill text-bg-success">0</span> 
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user fa-fw"></i>
+                        Sediel Ruiz
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#!">Mi perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../../index-logout.html">
+                            Cerrar sesion
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!--
+            Container
+        -->
+        <div id="layoutSidenav">
+            <!--
+                Menu
+            -->
+            
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Estadisticas</div>
+                            <a class="nav-link" href="#!">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            
+                            <div class="sb-sidenav-menu-heading">Administración</div>
+                            
+
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseProducts" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="sb-nav-link-icon"><i class="fas fa-project-diagram"></i></div>
+                                Productos
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseProducts" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="create.html">Crear producto</a>
+                                    <a class="nav-link" href="consult.html">Consulta</a>
+                                    <a class="nav-link" href="catalogue.html">Catalogo</a>
+                                </nav>
+                            </div>
+        
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                Ordenes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseOrders" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                     
+                                     <a class="nav-link" href="history.html">Mis ordenes</a>
+                                </nav>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logueado como:</div>
+                        Sediel Ruiz
+                        <br>
+                        Administrador
+                    </div>
+                </nav>
+            </div>
+
+
+            <div id="layoutSidenav_content">
+                <main class="py-4 container">
+                    <!--
+                        Contenido
+                    -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-sm col-md-8">
+                                    <h2>Confirmar orden</h2>
+                                </div>
+                                <div class="col-sm col-md-4 text-right">
+                                    <a href="../cart.html" class="btn btn-primary">Volver al carrito</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" action="#!" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-8">
+                                        <h3><i class="fas fa-shopping-cart"></i> Productos</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 text-right">
+                                        
+                                    </div>
+                                </div><hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-9">
+                                        <span class="text-muted miga">NOMBRE:</span> Aceite (12345678) 
+                                        <span class="badge badge-primary font-14">Cantidad: 2</span>
+                                        <span class="badge badge-primary font-14">Precio: $ 3.000</span>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 text-right">
+                                        <span class="text-muted miga">TOTAL:</span> <span class="font-18"> $ 6.000</span>
+                                    </div>
+                                </div><hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-9">
+                                        <span class="text-muted miga">NOMBRE:</span> Aceite (12345678) 
+                                        <span class="badge badge-primary font-14">Cantidad: 4</span>
+                                        <span class="badge badge-primary font-14">Precio: $ 3.000</span>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 text-right">
+                                        <span class="text-muted miga">TOTAL:</span> <span class="font-18"> $ 12.000</span>
+                                    </div>
+                                </div><hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+                                        <span class="font-18">TOTAL: $ 18.000</span>
+                                    </div>
+                                </div>
+                                <hr>
+                
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-8">
+                                        <h3><i class="fas fa-file-invoice-dollar"></i> Información de facturación</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 text-right">
+                                        <a href="#!" class="btn btn-success">Editar</a>
+                                    </div>
+                                </div><hr>
+                                <div class="alert alert-danger">
+                                    No tiene datos facturación registrados ingresa
+                                    <a href="#!" class="dark">Aquí</a>
+                                </div><br />
+
+                                <div class="col-xs-12 col-sm-12 col-md-12 card card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="billing" id="billing" value="" checked>
+                                        <label class="form-check-label" for="billing">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                                    <span class="text-muted miga font-12">NOMBRE FACTURA:</span> <span class="font-16"><b>Sediel Ruiz</b></span><br>
+                                                    <span class="text-muted miga font-12">TIPO DE DOCUMENTO:</span> <span class="font-16">Cedula</span><br>
+                                                    <span class="text-muted miga font-12">DOCUMENTO:</span> <span class="font-16">123456789</span><br>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <br><hr>
+                
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-8">
+                                        <h3><i class="fas fa-truck"></i> Información de envio</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 text-right">
+                                        <a href="#!" class="btn btn-success">Editar</a>
+                                    </div>
+                                </div><hr>
+                                
+                                <div class="col-xs-12 col-sm-12 col-md-12 card card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="address" id="address" value="" checked>
+                                        <label class="form-check-label" for="address">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-6">
+                                                    <span class="text-muted miga font-12">NOMBRE QUIEN RECIBE:</span> <span class="font-16"><b>Sediel Ruiz</b></span><br>
+                                                    <span class="text-muted miga font-12">CELULAR:</span> <span class="font-16">3204569878</span><br>
+                                                    <span class="text-muted miga font-12">CIUDAD:</span> <span class="font-16">Bogotá</span><br>
+                                                    <span class="text-muted miga font-12">BARRIO:</span> <span class="font-16">Barrios Unidos</span><br>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-6">
+                                                    <span class="text-muted miga font-12">DIRECCIÓN:</span> <span class="font-16">Calle falsa 123</span><br>
+                                                    <span class="text-muted miga font-12">COMPLEMENTO DIRECCIÓN:</span> <span class="font-16">Apto 123</span><br>
+                                                    <span class="text-muted miga font-12">CÓDIGO POSTAL:</span> <span class="font-16">111001</span>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-success btn-pay font-20">
+                                        <i class="fas fa-hand-holding-usd"></i> Pagar
+                                    </button>
+                                    <a href="../cart.html" class="btn btn-primary">Volver</a>
+                                </div><hr>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+                
+                <!--
+                    Footer
+                -->
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">&copy; 2022</div>
+                            <div>
+                                <a href="#">Politícas de privacidad</a>
+                                &middot;
+                                <a href="#">Terminos y condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>

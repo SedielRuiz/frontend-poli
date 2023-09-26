@@ -1,5 +1,8 @@
-.footer{
-    background-color: #343a40 !important;
+.backgroundBlackGrey{
+	background: linear-gradient(to right, #000, rgb(94, 91, 91)) !important;
+}
+.backgroundGreyBlack{
+	background: linear-gradient(to right, rgb(94, 91, 91), #000) !important;
 }
 .icon-20{
     font-size: 20px;

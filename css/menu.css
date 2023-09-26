@@ -1,11 +1,4 @@
 @charset "UTF-8";
-
-.backgroundBlackGrey{
-	background: linear-gradient(to right, #000, rgb(94, 91, 91)) !important;
-}
-.backgroundGreyBlack{
-	background: linear-gradient(to right, rgb(94, 91, 91), #000) !important;
-}
 #layoutAuthentication {
   display: flex;
   flex-direction: column;

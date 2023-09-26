@@ -124,6 +124,142 @@
                     <!--
                         Contenido
                     -->
+
+                    <main class="py-4 container">
+                        <!--
+                            Contenido
+                        -->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-9 align-self-center">
+                                <h2>Productos</h2>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 text-right">
+                            </div>
+                        </div><hr>
+                        <div class="card">
+                            <form action="#">
+                                <div class="card-body">
+                                    <h3>
+                                        <i class="fas fa-filter"></i> Filtros
+                                    </h3><hr>
+                                    <h5>Orden de productos</h5>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" onchange="orderProducts()" name="order" id="radioOrderName" value="name" {{$order == 'name' ? 'checked' : ''}}>
+                                        <label class="form-check-label" for="radioOrderName">Nombre</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" onchange="orderProducts()" name="order" id="radioOrderPrice" value="price" {{$order == 'price' ? 'checked' : ''}}>
+                                        <label class="form-check-label" for="radioOrderPrice">Precio</label>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-3">
+                                            <span class="form-group">
+                                                <label for="search">Palabra clave</label>
+                                            </span>
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" id="search" name="search" value="" placeholder="Buscar">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3">
+                                            <span class="form-group">
+                                                <label for="images">Busqueda por imagen</label>
+                                            </span>
+                                            <div class="form-group">
+                                                <select name="images" id="images" class="form-control mr-sm-5">
+                                                    <option value="1"></option>-Todos-</option>
+                                                    <option value="2">Sin imagen</option>
+                                                    <option value="3">Con imagen</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3">
+                                            <span class="form-group">
+                                                <label for="orderName">Orden por <span id="typeOrder">nombre</span></label>
+                                            </span>
+                                            <div class="form-group">
+                                                <select name="orderName" id="orderName" class="form-control mr-sm-5">
+                                                    <option value="asc">Ascendente</option>
+                                                    <option value="desc">Descendente</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2">
+                                            <span class="form-group">
+                                                <label for="category">Categoría</label>
+                                            </span>
+                                            <div class="form-group">
+                                                <select name="category" id="category" class="form-control mr-sm-5">
+                                                    <option value="">-Todas-</option>
+                                                    <option value="1">Lacteos</option>
+                                                    <option value="2">Grasa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-1 btn-row">
+                                            <button class="btn btn-outline-success" type="submit">Filtrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div><br>
+                        <div class="row justify-content-center">
+                            <div class="col-xs-12 col-sm-12 col-md-4 p-1">
+                                <a href="pages/products/detail.html" class="item dark">
+                                    <div class="card boxItemPanel standing-out" style="height: 500px;max-height: 500px;padding: 25px 10px 7px;">
+                                        <div class="imgPanel align-self-center img-catalogue">
+                                            <img src="images/aceite.webp" class="card-img-top d-block img-responsive itemPanel" alt="Aceite">
+                                        </div>
+                                        <div class="card-body align-self-center text-center">
+                                            <p class="card-text">
+                                                <h3 class="dark">
+                                                    <span class="promotion">$ 5.000</span>
+                                                    <br>
+                                                    Promoción <br>
+                                                    14 días /
+                                                    $ 3.000
+                                                </h3>
+                                                <span class="font-20">Disponible</span>
+                                                <br>
+                                                <h4 class="dark  cursor">Más información</h5>
+                                            </p>
+                                            <span class="card-title dark font-14">
+                                                Aceite <br>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="col-xs-12 col-sm-12 col-md-4 p-1">
+                                <a href="pages/products/detail.html" class="item dark">
+                                    <div class="card boxItemPanel standing-out" style="height: 500px;max-height: 500px;padding: 25px 10px 7px;">
+                                        <div class="imgPanel align-self-center img-catalogue">
+                                            <img src="images/aceite.webp" class="card-img-top d-block img-responsive itemPanel" alt="Aceite">
+                                        </div>
+                                        <div class="card-body align-self-center text-center">
+                                            <p class="card-text">
+                                                <h3 class="dark">
+                                                    <span class="promotion">$ 5.000</span>
+                                                    <br>
+                                                    Promoción <br>
+                                                    14 días /
+                                                    $ 3.000
+                                                </h3>
+                                                <span class="font-20">Disponible</span>
+                                                <br>
+                                                <h4 class="dark  cursor">Más información</h5>
+                                            </p>
+                                            <span class="card-title dark font-14">
+                                                Aceite <br>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </main>
                 </main>
                 
                 <!--

@@ -3,6 +3,7 @@ let productCart = {
     product:0,
     quantity:0
 }
+
 jQuery(document).ready(function(){
     const urlParams = new URLSearchParams(window.location.search)
     const id = urlParams.get('id')
@@ -32,11 +33,11 @@ function addProduct(){
     window.location.href = "../cart.html"
 }
 
-function removeproducCart(idx){
+function removeProductCart(idx){
     cart.splice(idx, 1)
 
     setData(cart)
-    $("#productCart_"+idx).remove()
+    location.reload()
 }
 
 function buildCart(cart, idx){
@@ -50,7 +51,7 @@ function buildCart(cart, idx){
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-10 align-self-center">
                             <span>
-                                <a class="dark" href="products/detail.html" target="_blank">`+cart.product.name+`</a>
+                                <a class="dark" href="products/detail.html?id=`+cart.product.id+`&detail=1" target="_blank">`+cart.product.name+`</a>
                                 <span class="badge badge-pill badge-light" data-toggle="collapse" href="#12345678" role="button" aria-expanded="false" aria-controls="12345678">
                                     <i class="fas fa-ellipsis-h cursor"></i>
                                 </span>
@@ -74,9 +75,7 @@ function buildCart(cart, idx){
                     <span><span class="d-md-none">Total:</span> $ `+cart.quantity * cart.product.price+`</span>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-1 text-center align-self-center">
-                    <form action="#!" method="POST">
-                        <i class="fas fa-trash-alt cursor font-18" onclick="removeproducCart(`+idx+`)"></i>
-                    </form>
+                    <i class="fas fa-trash-alt cursor font-18" onclick="removeProductCart(`+idx+`)"></i>
                 </div>
             </div><hr>
         </div>

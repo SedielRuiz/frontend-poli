@@ -19,7 +19,10 @@
 
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+        <script src="../../js/products.js"></script>
+        <script src="../../js/cart.js"></script>
+        <script src="../../js/orders.js"></script>
 
     </head>
     <body>
@@ -137,108 +140,91 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form method="post" action="#!" enctype="multipart/form-data">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-8">
-                                        <h3><i class="fas fa-shopping-cart"></i> Productos</h3>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-4 text-right">
-                                        
-                                    </div>
-                                </div><hr>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-9">
-                                        <span class="text-muted miga">NOMBRE:</span> Aceite (12345678) 
-                                        <span class="badge badge-primary font-14">Cantidad: 2</span>
-                                        <span class="badge badge-primary font-14">Precio: $ 3.000</span>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-3 text-right">
-                                        <span class="text-muted miga">TOTAL:</span> <span class="font-18"> $ 6.000</span>
-                                    </div>
-                                </div><hr>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-9">
-                                        <span class="text-muted miga">NOMBRE:</span> Aceite (12345678) 
-                                        <span class="badge badge-primary font-14">Cantidad: 4</span>
-                                        <span class="badge badge-primary font-14">Precio: $ 3.000</span>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-3 text-right">
-                                        <span class="text-muted miga">TOTAL:</span> <span class="font-18"> $ 12.000</span>
-                                    </div>
-                                </div><hr>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-                                        <span class="font-18">TOTAL: $ 18.000</span>
-                                    </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                    <h3><i class="fas fa-shopping-cart"></i> Productos</h3>
                                 </div>
-                                <hr>
-                
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-8">
-                                        <h3><i class="fas fa-file-invoice-dollar"></i> Información de facturación</h3>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-4 text-right">
-                                        <a href="#!" class="btn btn-success">Editar</a>
-                                    </div>
-                                </div><hr>
-                                <div class="alert alert-danger">
-                                    No tiene datos facturación registrados ingresa
-                                    <a href="#!" class="dark">Aquí</a>
-                                </div><br />
+                                <div class="col-xs-12 col-sm-12 col-md-4 text-right">
+                                    
+                                </div>
+                            </div><hr>
 
-                                <div class="col-xs-12 col-sm-12 col-md-12 card card-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="billing" id="billing" value="" checked>
-                                        <label class="form-check-label" for="billing">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                                    <span class="text-muted miga font-12">NOMBRE FACTURA:</span> <span class="font-16"><b>Sediel Ruiz</b></span><br>
-                                                    <span class="text-muted miga font-12">TIPO DE DOCUMENTO:</span> <span class="font-16">Cedula</span><br>
-                                                    <span class="text-muted miga font-12">DOCUMENTO:</span> <span class="font-16">123456789</span><br>
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>
+                            <div id="confirmProducts">
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+                                    <span class="font-18">TOTAL: $ <span id="totalCart"></span></span>
                                 </div>
-                                <br><hr>
-                
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-8">
-                                        <h3><i class="fas fa-truck"></i> Información de envio</h3>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-4 text-right">
-                                        <a href="#!" class="btn btn-success">Editar</a>
-                                    </div>
-                                </div><hr>
-                                
-                                <div class="col-xs-12 col-sm-12 col-md-12 card card-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="address" id="address" value="" checked>
-                                        <label class="form-check-label" for="address">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-12 col-md-6">
-                                                    <span class="text-muted miga font-12">NOMBRE QUIEN RECIBE:</span> <span class="font-16"><b>Sediel Ruiz</b></span><br>
-                                                    <span class="text-muted miga font-12">CELULAR:</span> <span class="font-16">3204569878</span><br>
-                                                    <span class="text-muted miga font-12">CIUDAD:</span> <span class="font-16">Bogotá</span><br>
-                                                    <span class="text-muted miga font-12">BARRIO:</span> <span class="font-16">Barrios Unidos</span><br>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-6">
-                                                    <span class="text-muted miga font-12">DIRECCIÓN:</span> <span class="font-16">Calle falsa 123</span><br>
-                                                    <span class="text-muted miga font-12">COMPLEMENTO DIRECCIÓN:</span> <span class="font-16">Apto 123</span><br>
-                                                    <span class="text-muted miga font-12">CÓDIGO POSTAL:</span> <span class="font-16">111001</span>
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>
+                            </div>
+                            <hr>
+            
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                    <h3><i class="fas fa-file-invoice-dollar"></i> Información de facturación</h3>
                                 </div>
-                                <br>
-                                <div class="text-right">
-                                    <button type="submit" class="btn btn-success btn-pay font-20">
-                                        <i class="fas fa-hand-holding-usd"></i> Pagar
-                                    </button>
-                                    <a href="../cart.html" class="btn btn-primary">Volver</a>
-                                </div><hr>
-                            </form>
+                                <div class="col-xs-12 col-sm-12 col-md-4 text-right">
+                                    <a href="#!" class="btn btn-success">Editar</a>
+                                </div>
+                            </div><hr>
+                            <div class="alert alert-danger">
+                                No tiene datos facturación registrados ingresa
+                                <a href="#!" class="dark">Aquí</a>
+                            </div><br />
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 card card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="billing" id="billing" value="" checked>
+                                    <label class="form-check-label" for="billing">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <span class="text-muted miga font-12">NOMBRE FACTURA:</span> <span class="font-16"><b>Sediel Ruiz</b></span><br>
+                                                <span class="text-muted miga font-12">TIPO DE DOCUMENTO:</span> <span class="font-16">Cedula</span><br>
+                                                <span class="text-muted miga font-12">DOCUMENTO:</span> <span class="font-16">123456789</span><br>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <br><hr>
+            
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                    <h3><i class="fas fa-truck"></i> Información de envio</h3>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4 text-right">
+                                    <a href="#!" class="btn btn-success">Editar</a>
+                                </div>
+                            </div><hr>
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12 card card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="address" id="address" value="" checked>
+                                    <label class="form-check-label" for="address">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                                <span class="text-muted miga font-12">NOMBRE QUIEN RECIBE:</span> <span class="font-16"><b>Sediel Ruiz</b></span><br>
+                                                <span class="text-muted miga font-12">CELULAR:</span> <span class="font-16">3204569878</span><br>
+                                                <span class="text-muted miga font-12">CIUDAD:</span> <span class="font-16">Bogotá</span><br>
+                                                <span class="text-muted miga font-12">BARRIO:</span> <span class="font-16">Barrios Unidos</span><br>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                                <span class="text-muted miga font-12">DIRECCIÓN:</span> <span class="font-16">Calle falsa 123</span><br>
+                                                <span class="text-muted miga font-12">COMPLEMENTO DIRECCIÓN:</span> <span class="font-16">Apto 123</span><br>
+                                                <span class="text-muted miga font-12">CÓDIGO POSTAL:</span> <span class="font-16">111001</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="text-right">
+                                <button onclick="addOrder()" class="btn btn-success btn-pay font-20">
+                                    <i class="fas fa-hand-holding-usd"></i> Pagar
+                                </button>
+                                <a href="../cart.html" class="btn btn-primary">Volver</a>
+                            </div><hr>
                         </div>
                     </div>
                 </main>

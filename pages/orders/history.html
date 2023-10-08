@@ -18,7 +18,8 @@
 
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+        <script src="../../js/orders.js"></script>
 
     </head>
     <body>
@@ -140,14 +141,14 @@
                                             <div class="col-xs-12 col-sm-12 col-md-9">
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-12 col-md-6">
-                                                        <h3>Orden #456789</h3>
+                                                        <h3>Orden # <span id="code"></span></h3>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-5">
                                                         <span class="badge badge-secondary labelList" style="background: #000;;">Pendiente</span>
                                                         <br>
                                                     </div>
                                                 </div>
-                                                Fecha 25/09/2023<br>
+                                                Fecha <span id="date"></span><br>
                                             </div>
                                             <div class="col-xs-12 col-sm-12 col-md-3 text-right">
                                                 <a href="#!" class="btn btn-success">Pagar</a>
@@ -163,34 +164,10 @@
                                             </div>
                                         </div><hr>
                                         <div class="row">
-                                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-12 col-md-9">
-                                                        <span class="text-muted miga">NOMBRE:</span> 
-                                                        <a href="{{route('products.show', $product['id'])}}">Aceite (12345678) </a>
-                                                        <span class="badge badge-primary font-14">Cantidad: 2</span>
-                                                        <span class="badge badge-primary font-14">Precio: $ 3.000</span>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-3 text-right">
-                                                        <span class="text-muted miga">TOTAL:</span> <span class="font-18"> $ 6.000</span>
-                                                    </div>
-                                                </div><hr>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-12 col-md-9">
-                                                        <span class="text-muted miga">NOMBRE:</span> 
-                                                        <a href="{{route('products.show', $product['id'])}}">Aceite (12345678) </a>
-                                                        <span class="badge badge-primary font-14">Cantidad: 4</span>
-                                                        <span class="badge badge-primary font-14">Precio: $ 3.000</span>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-3 text-right">
-                                                        <span class="text-muted miga">TOTAL:</span> <span class="font-18"> $ 12.000</span>
-                                                    </div>
-                                                </div><hr>
+                                            <div class="col-xs-12 col-sm-12 col-md-12" id="confirmProducts">
                                             </div>
                                             <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-                                                <span class="font-18">TOTAL: $ 18.000</span>
+                                                <span class="font-18">TOTAL: $ <span id="totalOrder"></span></span>
                                             </div>
                                         </div><hr>
                                         <div class="row">
@@ -200,9 +177,9 @@
                                                     <a href="#!" class="btn btn-success">Editar</a>
                                                 </h4><hr>
                                                 <div class="collapse show" id="collapseBills">
-                                                    Tipo de documento: <span>Cedula</span><br>
-                                                    Número de documento: <span>12345678</span><br>
-                                                    Nombre: <span><b>Sediel Ruiz</b></span>
+                                                    Tipo de documento: <span id="type_document"></span><br>
+                                                    Número de documento: <span id="document"></span><br>
+                                                    Nombre: <span><b id="name_billing"></b></span>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-12 col-md-6">
@@ -212,15 +189,15 @@
                                                 </h4><hr>
                                                 <div class="row collapse show" id="collapseDelivery">
                                                     <div class="col-xs-12 col-sm-12 col-md-5">
-                                                        Nombre: <span class=""><b>Sediel Ruiz</b></span><br>
-                                                        Celular: <span>3214458796</span><br>
-                                                        <span>Ciudad: Bogotá</span><br>
-                                                        <span>Barrio: Barrios Unidos</span><br>
+                                                        Nombre: <span class=""><b id="name_delivery"></b></span><br>
+                                                        Celular: <span id="phone"></span><br>
+                                                        <span>Ciudad: <span id="city"></span></span><br>
+                                                        <span>Barrio: <span id="neighborhood"></span></span><br>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-7">
-                                                        <span>Dirección: Calle falsa 123</span><br>
-                                                        <span>Complemento: Apto 123</span><br>
-                                                        <span>Código postal: 1110011</span><br>
+                                                        <span>Dirección: <span id="address"></span></span><br>
+                                                        <span>Complemento: <span id="complement"></span></span><br>
+                                                        <span>Código postal: <span id="postal_code"></span></span><br>
                                                         Transportadora: 
                                                         <span>
                                                             <a href="#!" target="_blank">Servientrega (54541548545345)</a>
